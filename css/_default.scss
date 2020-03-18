@@ -1,0 +1,25 @@
+@import "./variables";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+html {
+    font-size: 12px;
+}
+
+body{
+    background-color: $bg-main;
+    font-family: GeorgeRoundedRegular;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style-type: none;
+}

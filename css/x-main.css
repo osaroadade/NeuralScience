@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css?family=Athiti&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Cormorant+Infant&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-color: #000421;
+    --text-color: #18ffff;
+    --dark-blue-1: #11263f;
+    --dark-blue-2: #0d3e76;
+    --dark-blue-3: #183665;
+    --light-blue-1: #117db6;
+    --light-blue-2: #5789D6;
+    --light-blue-3: #699CE6;
+    --greenish-blue-1: #178c7a;
+    --yellow-1: #f2cd27;
+    
+}
+
+html {
+    font-size: 12px;
+}
+
+body {
+    background: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--text-color);
+    display: grid;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+@media screen and (min-width: 768px) {
+
+}
+
+/* nav area */

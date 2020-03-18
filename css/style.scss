@@ -1,0 +1,265 @@
+@import "./default";
+@import "./variables";
+@import "./fonts";
+
+header {
+    position: fixed;
+    top: 0;
+    z-index: 100000;
+    width:100%;
+    background-color: transparent;
+}
+
+nav {
+    padding: 2em 5.5em;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    transition: .8s;
+
+    .logo{
+        font-size: 1.6em;
+        color: black;
+        font-family: GeorgeRoundedBold;
+        letter-spacing: .1em;
+
+        span{
+            color: $io-color;
+        }
+        
+    }
+
+    .nav__list{   
+        width: 100%;
+        margin: auto;
+        text-align: right;
+
+        .nav__item{
+            display: inline;
+            padding: 0 0 0 2em;
+            font-family: GeorgeRoundedBold;
+
+            a {
+                color: black;
+                font-size: 1.25rem;
+                position: relative;
+
+                &::after {
+                    content: '';
+                    width: 0%;
+                    height: .3rem;
+                    background-color: $io-color;
+                    position: absolute;
+                    left: 50%;
+                    top: 2.8em;
+                    transform: translateX(-50%);
+                    transition: .4s;
+                }
+
+                &:hover::after {
+                    width: 100%;
+                }
+
+            }
+
+        }
+
+    }
+
+}
+
+.hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+    "text img";
+    margin: 6em 0 0 0;
+    height: 100vh;
+    padding: 3em 5.5em 0 5.5em;
+    background-color: $bg-main;
+
+    
+    &__cog1 {
+        position: relative;
+        left: -44%;
+        top: -210%;
+
+        svg {
+            width: 60%;
+        }
+    }
+
+    &__left {
+        grid-area: text;
+        padding: 3em 0;
+        margin: auto;
+
+        &__h1 {
+            font-size: 2.2em;
+            font-family: GeorgeRoundedBold;
+        }
+
+        &__p {
+            font-size: 2em;
+            font-family: GeorgeRoundedLight;
+        }
+
+        &__button {
+            color: $bg-main;
+            background-color: $btn-color;
+            display: inline-block;
+            border: 0.1em solid $btn-color;
+            border-radius: 0.15em;
+            text-align: center;
+            font-family: GeorgeRoundedBold;
+            padding: 1em 2em;
+            font-size: 1.1em;
+
+            &:hover {
+                color: $btn-color-1;
+                background-color: $bg-main;
+                border: 0.1em solid $btn-color-1;
+            }
+
+        }
+
+    }
+
+    &__right {
+        grid-area: img;
+        padding: 3em 0;
+
+        &__img {
+            width: 100%;
+        }
+
+    }
+
+}
+
+.wwd {
+    background-color: $bg-main-1;
+    padding: 2em 0 2em 5.5em;
+
+    &__maintext {
+        font-family: GeorgeRoundedBold;
+        font-size: 1.3em;
+        color: $bg-main;
+        position: relative;
+
+    }
+
+}
+
+.about {
+    padding: 2em 5.5em 2em 0;
+
+    &__maintext {
+        text-align: right;
+        font-family: GeorgeRoundedBold;
+        font-size: 1.3em;
+        color: $bg-main-1;
+        position: relative;
+    }
+
+}
+
+.contact {
+    background-color: $bg-main-1;
+    padding: 2em 0 2em 5.5em;
+
+    &__maintext {
+        font-family: GeorgeRoundedBold;
+        font-size: 1.3em;
+        color: $bg-main;
+        position: relative;
+    }
+}
+
+footer {
+    background-color: black;
+    padding: 2em 5.5em 2em 5.5em;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    grid-template-areas: 
+        "logo ";
+
+    .footer__main{
+
+        .footer__logo {
+            grid-area: logo;
+            font-size: 1.4em;
+            color: whitesmoke;
+            font-family: GeorgeRoundedBold;
+            letter-spacing: .1em;
+            position: relative;
+    
+            span{
+                color: $io-color;
+            }
+
+        }
+
+        .footer__brief {
+            color: rgb(144, 144, 144);
+        }
+
+    }
+
+}
+
+.add-shadow {
+    box-shadow: 0px 1px 28px 0px rgba(60, 64, 67, 0.3);
+}
+
+.nav-bg {
+    background-color: #ffffff;
+    padding: 2em 4em;
+}
+
+// cog animation
+
+#top-cog {
+    animation: clockwise 10s infinite linear;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+@keyframes clockwise {
+    from{
+        transform: rotateZ(0deg);
+    }
+    to {
+        transform: rotateZ(360deg);
+    }
+}
+
+#bottom-cog {
+    animation: anti-clockwise 10s infinite linear;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+@keyframes anti-clockwise {
+    from{
+        transform: rotateZ(360deg);
+    }
+    to {
+        transform: rotateZ(0deg);
+    }
+}
+
+#main-cog {
+    animation: main-cog 10s infinite linear;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+@keyframes main-cog {
+    from{
+        transform: rotateZ(0deg);
+    }
+    to {
+        transform: rotateZ(360deg);
+    }
+}

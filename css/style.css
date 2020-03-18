@@ -1,0 +1,366 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+html {
+  font-size: 12px;
+}
+
+body {
+  background-color: #c5edff;
+  font-family: GeorgeRoundedRegular;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+@font-face {
+  font-family: GeorgeRoundedLight;
+  src: url(../fonts/george-rounded-sans-serif/WEB/GeorgeRoundedLight.woff);
+}
+
+@font-face {
+  font-family: GeorgeRoundedLightItalic;
+  src: url(../fonts/george-rounded-sans-serif/WEB/GeorgeRoundedLightItalic.woff);
+}
+
+@font-face {
+  font-family: GeorgeRoundedRegular;
+  src: url(../fonts/george-rounded-sans-serif/WEB/GeorgeRoundedRegular.woff);
+}
+
+@font-face {
+  font-family: GeorgeRoundedItalic;
+  src: url(../fonts/george-rounded-sans-serif/WEB/GeorgeRoundedItalic.woff);
+}
+
+@font-face {
+  font-family: GeorgeRoundedSemibold;
+  src: url(../fonts/george-rounded-sans-serif/WEB/GeorgeRoundedSemibold.woff);
+}
+
+@font-face {
+  font-family: GeorgeRoundedSemiboldItalic;
+  src: url(../fonts/george-rounded-sans-serif/WEB/GeorgeRoundedSemiboldItalic.woff);
+}
+
+@font-face {
+  font-family: GeorgeRoundedBold;
+  src: url(../fonts/george-rounded-sans-serif/WEB/GeorgeRoundedBold.woff);
+}
+
+@font-face {
+  font-family: GeorgeRoundedBoldItalic;
+  src: url(../fonts/george-rounded-sans-serif/WEB/GeorgeRoundedBoldItalic.woff);
+}
+
+header {
+  position: fixed;
+  top: 0;
+  z-index: 100000;
+  width: 100%;
+  background-color: transparent;
+}
+
+nav {
+  padding: 2em 5.5em;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 2fr;
+      grid-template-columns: 1fr 2fr;
+  -webkit-transition: .8s;
+  transition: .8s;
+}
+
+nav .logo {
+  font-size: 1.6em;
+  color: black;
+  font-family: GeorgeRoundedBold;
+  letter-spacing: .1em;
+}
+
+nav .logo span {
+  color: #3131B4;
+}
+
+nav .nav__list {
+  width: 100%;
+  margin: auto;
+  text-align: right;
+}
+
+nav .nav__list .nav__item {
+  display: inline;
+  padding: 0 0 0 2em;
+  font-family: GeorgeRoundedBold;
+}
+
+nav .nav__list .nav__item a {
+  color: black;
+  font-size: 1.25rem;
+  position: relative;
+}
+
+nav .nav__list .nav__item a::after {
+  content: '';
+  width: 0%;
+  height: .3rem;
+  background-color: #3131B4;
+  position: absolute;
+  left: 50%;
+  top: 2.8em;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+nav .nav__list .nav__item a:hover::after {
+  width: 100%;
+}
+
+.hero {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+      grid-template-areas: "text img";
+  margin: 6em 0 0 0;
+  height: 100vh;
+  padding: 3em 5.5em 0 5.5em;
+  background-color: #c5edff;
+}
+
+.hero__cog1 {
+  position: relative;
+  left: -44%;
+  top: -210%;
+}
+
+.hero__cog1 svg {
+  width: 60%;
+}
+
+.hero__left {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: text;
+  padding: 3em 0;
+  margin: auto;
+}
+
+.hero__left__h1 {
+  font-size: 2.2em;
+  font-family: GeorgeRoundedBold;
+}
+
+.hero__left__p {
+  font-size: 2em;
+  font-family: GeorgeRoundedLight;
+}
+
+.hero__left__button {
+  color: #c5edff;
+  background-color: #258BE0;
+  display: inline-block;
+  border: 0.1em solid #258BE0;
+  border-radius: 0.15em;
+  text-align: center;
+  font-family: GeorgeRoundedBold;
+  padding: 1em 2em;
+  font-size: 1.1em;
+}
+
+.hero__left__button:hover {
+  color: #2280B4;
+  background-color: #c5edff;
+  border: 0.1em solid #2280B4;
+}
+
+.hero__right {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: img;
+  padding: 3em 0;
+}
+
+.hero__right__img {
+  width: 100%;
+}
+
+.wwd {
+  background-color: #27307D;
+  padding: 2em 0 2em 5.5em;
+}
+
+.wwd__maintext {
+  font-family: GeorgeRoundedBold;
+  font-size: 1.3em;
+  color: #c5edff;
+  position: relative;
+}
+
+.about {
+  padding: 2em 5.5em 2em 0;
+}
+
+.about__maintext {
+  text-align: right;
+  font-family: GeorgeRoundedBold;
+  font-size: 1.3em;
+  color: #27307D;
+  position: relative;
+}
+
+.contact {
+  background-color: #27307D;
+  padding: 2em 0 2em 5.5em;
+}
+
+.contact__maintext {
+  font-family: GeorgeRoundedBold;
+  font-size: 1.3em;
+  color: #c5edff;
+  position: relative;
+}
+
+footer {
+  background-color: black;
+  padding: 2em 5.5em 2em 5.5em;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1.5fr 1fr 1fr 1fr;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr;
+      grid-template-areas: "logo ";
+}
+
+footer .footer__main .footer__logo {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: logo;
+  font-size: 1.4em;
+  color: whitesmoke;
+  font-family: GeorgeRoundedBold;
+  letter-spacing: .1em;
+  position: relative;
+}
+
+footer .footer__main .footer__logo span {
+  color: #3131B4;
+}
+
+footer .footer__main .footer__brief {
+  color: #909090;
+}
+
+.add-shadow {
+  -webkit-box-shadow: 0px 1px 28px 0px rgba(60, 64, 67, 0.3);
+          box-shadow: 0px 1px 28px 0px rgba(60, 64, 67, 0.3);
+}
+
+.nav-bg {
+  background-color: #ffffff;
+  padding: 2em 4em;
+}
+
+#top-cog {
+  -webkit-animation: clockwise 10s infinite linear;
+          animation: clockwise 10s infinite linear;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  transform-box: fill-box;
+}
+
+@-webkit-keyframes clockwise {
+  from {
+    -webkit-transform: rotateZ(0deg);
+            transform: rotateZ(0deg);
+  }
+  to {
+    -webkit-transform: rotateZ(360deg);
+            transform: rotateZ(360deg);
+  }
+}
+
+@keyframes clockwise {
+  from {
+    -webkit-transform: rotateZ(0deg);
+            transform: rotateZ(0deg);
+  }
+  to {
+    -webkit-transform: rotateZ(360deg);
+            transform: rotateZ(360deg);
+  }
+}
+
+#bottom-cog {
+  -webkit-animation: anti-clockwise 10s infinite linear;
+          animation: anti-clockwise 10s infinite linear;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  transform-box: fill-box;
+}
+
+@-webkit-keyframes anti-clockwise {
+  from {
+    -webkit-transform: rotateZ(360deg);
+            transform: rotateZ(360deg);
+  }
+  to {
+    -webkit-transform: rotateZ(0deg);
+            transform: rotateZ(0deg);
+  }
+}
+
+@keyframes anti-clockwise {
+  from {
+    -webkit-transform: rotateZ(360deg);
+            transform: rotateZ(360deg);
+  }
+  to {
+    -webkit-transform: rotateZ(0deg);
+            transform: rotateZ(0deg);
+  }
+}
+
+#main-cog {
+  -webkit-animation: main-cog 10s infinite linear;
+          animation: main-cog 10s infinite linear;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  transform-box: fill-box;
+}
+
+@-webkit-keyframes main-cog {
+  from {
+    -webkit-transform: rotateZ(0deg);
+            transform: rotateZ(0deg);
+  }
+  to {
+    -webkit-transform: rotateZ(360deg);
+            transform: rotateZ(360deg);
+  }
+}
+
+@keyframes main-cog {
+  from {
+    -webkit-transform: rotateZ(0deg);
+            transform: rotateZ(0deg);
+  }
+  to {
+    -webkit-transform: rotateZ(360deg);
+            transform: rotateZ(360deg);
+  }
+}
+/*# sourceMappingURL=style.css.map */
