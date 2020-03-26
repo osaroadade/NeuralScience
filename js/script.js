@@ -1,15 +1,12 @@
-//nav scroll start
-
-  window.onscroll = () =>{
-    const header = document.querySelector('#add-shadow');
-    if(this.scrollY <= 40) nav.className = '';
-    else nav.className = 'add-shadow';
-  };
-  
-  window.onscroll = () =>{
-    const nav = document.querySelector('#nav-bg');
-    if(this.scrollY <= 50) nav.className = '';
-    else nav.className = 'nav-bg';
-  };
-
-//nav scroll end
+//Change Nav style on scroll
+window.onscroll = () => {
+	const header = document.querySelector("#add-shadow");
+	const nav = document.querySelector("#nav-bg")
+	if (this.scrollY <= 40) {
+		header.className = "";
+		nav.className = "";
+	} else {
+		header.className = "add-shadow";
+		nav.className = "nav-bg";
+	}
+}

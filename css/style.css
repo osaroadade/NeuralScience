@@ -79,6 +79,10 @@ nav {
       grid-template-columns: 1fr 2fr;
   -webkit-transition: .8s;
   transition: .8s;
+  -webkit-transition-property: padding;
+  transition-property: padding;
+  -webkit-transition-delay: 100ms;
+          transition-delay: 100ms;
 }
 
 nav .logo {
